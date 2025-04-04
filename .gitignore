@@ -1,0 +1,48 @@
+# Virtual environment
+myenv/  # <--- Your specific venv name
+venv/
+.venv/
+env/
+.env/
+__pypackages__/
+
+# Python bytecode and cache
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+.pytest_cache/
+.coverage
+.coverage.*
+*.egg-info/
+dist/
+build/
+
+# Large data files
+data/
+*.csv
+*.zip
+*.tar.gz
+*.sqlite
+*.parquet
+*.h5
+*.pkl
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+*.swo
+.vscode/
+
+# Sensitive information
+*.env
+secrets.json
+config.ini
+credentials.txt
+
+# Logs and temp files
+*.log
+tmp/
+temp/
