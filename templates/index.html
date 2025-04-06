@@ -1,63 +1,64 @@
+<!-- index.html -->
+<!-- ----------------------------
+     Displays summarized crypto news
+     Each card: title + source + summary + link
+----------------------------- -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>📰 Crypto News Digest</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            padding: 30px;
-            max-width: 800px;
-            margin: auto;
-        }
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-        }
-        .news-card {
-            background: white;
-            margin: 20px 0;
-            padding: 15px 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .news-title {
-            font-size: 18px;
-            font-weight: bold;
-            color: #3498db;
-            margin-bottom: 10px;
-            text-decoration: none;
-        }
-        .news-title:hover {
-            color: #2c3e50;
-        }
-        .summary {
-            font-size: 15px;
-            color: #555;
-        }
-        .source {
-            font-size: 12px;
-            color: #999;
-            margin-top: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Crypto News Summary</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      padding: 1rem;
+    }
+    .news-card {
+      background: white;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .news-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .news-source {
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 0.2rem;
+    }
+    .news-summary {
+      margin-top: 0.6rem;
+      font-size: 1rem;
+    }
+    .news-link {
+      margin-top: 0.6rem;
+      display: inline-block;
+      font-size: 0.95rem;
+      color: #007BFF;
+      text-decoration: none;
+    }
+    .news-link:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <h1>📰 Crypto News Digest</h1>
 
-    {% if news %}
-        {% for article in news %}
-            <div class="news-card">
-                <a href="{{ article.link }}" target="_blank" class="news-title">{{ article.title }}</a>
-                <p class="summary">
-                    {{ article.summary if article.summary else 'Summary coming soon...' }}
-                </p>
-                <p class="source">Source: {{ article.source if article.source else 'CryptoCompare' }}</p>
-            </div>
-        {% endfor %}
-    {% else %}
-        <p>No news available.</p>
-    {% endif %}
+  <h2>📰 Latest Crypto News (Summarized)</h2>
+
+  {% for article in news %}
+    <div class="news-card">
+      <div class="news-title">{{ article.title }}</div>
+      <div class="news-source">Source: {{ article.source }}</div>
+      <div class="news-summary">{{ article.summary }}</div>
+      <a class="news-link" href="{{ article.link }}" target="_blank">Read full article →</a>
+    </div>
+  {% endfor %}
+
 </body>
 </html>
