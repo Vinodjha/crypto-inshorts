@@ -54,13 +54,39 @@ crypto-news/
 ## 🛠️ Technologies Used
 
 ### Crawl4AI (Web Scraper)
-An open-source NLP-based web scraper that detects relevant content on pages automatically — no custom parser needed.
+Crawl4AI is an open-source NLP-based scraper that automatically understands and extracts the main content from webpages — without knowing the site's structure in advance. Unlike traditional scrapers, it uses NLP signals to detect the most relevant section of an article.
+
+- Used here to fetch HTML from crypto news links
+
+- Handles dynamic layouts and article-heavy pages well
+
+- Easily integrates with asyncio for concurrent scraping
 
 ### BeautifulSoup (Cleaner)
-Extracts readable sections from parsed HTML. Removes navbars, links, ads, and other noisy content.
+BeautifulSoup is a Python library that parses and navigates HTML/XML content. In this project:
+
+- It's used to locate content within <article>, <div>, and <p> tags
+
+- Filters out layout junk like navbars, social links, ads
+
+- Helps format the cleaned paragraphs for summarization
 
 ### Hugging Face Transformers API
 The hosted model (`facebook/bart-large-cnn`) is used to summarize articles remotely, avoiding local heavy computation.
+facebook/bart-large-cnn
+Type: Transformer-based Sequence-to-Sequence model
+Architecture: BART (Bidirectional and Auto-Regressive Transformers)
+Trained by: Facebook AI
+Use-case: Summarization of long documents or news articles
+
+📚 How It Works
+BART is a denoising autoencoder for pretraining sequence-to-sequence models. It combines the best of:
+
+BERT: Bidirectional encoder (good at understanding context)
+
+GPT: Left-to-right decoder (good at text generation)
+
+facebook/bart-large-cnn is a fine-tuned version of BART specifically for summarizing long texts (like news articles). It was trained on the CNN/DailyMail dataset, which contains thousands of news articles paired with human-written summaries.
 
 ---
 
@@ -92,17 +118,6 @@ Cleaned : Ethereum drops 46%, but analysts remain hopeful for $5K recovery in 20
 - Flask Backend
 - Minimal UI Design
 
----
 
-## 📣 LinkedIn Summary (Ready-to-Post)
-
-🚀 Just wrapped up a real-time **Crypto News Summarizer** project!
-
-🔍 What it does:
-- Fetches trending crypto headlines
-- Extracts article with **Crawl4AI**
-- Cleans junk HTML with **BeautifulSoup**
-- Summarizes via **Hugging Face Transformers API**
-- Displays it using **Flask UI**
 
 🛠️ Python | Flask | NLP | Regex | APIs | Transformers | AsyncIO
