@@ -73,11 +73,12 @@ BeautifulSoup is a Python library that parses and navigates HTML/XML content. In
 
 ### Hugging Face Transformers API
 The hosted model (`facebook/bart-large-cnn`) is used to summarize articles remotely, avoiding local heavy computation.
-facebook/bart-large-cnn
-Type: Transformer-based Sequence-to-Sequence model
-Architecture: BART (Bidirectional and Auto-Regressive Transformers)
-Trained by: Facebook AI
-Use-case: Summarization of long documents or news articles
+
+**facebook/bart-large-cnn**
+- Type: Transformer-based Sequence-to-Sequence model
+- Architecture: BART (Bidirectional and Auto-Regressive Transformers)
+- Trained by: Facebook AI
+- Use-case: Summarization of long documents or news articles
 
 📚 How It Works
 BART is a denoising autoencoder for pretraining sequence-to-sequence models. It combines the best of:
