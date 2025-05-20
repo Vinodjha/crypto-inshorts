@@ -1,13 +1,13 @@
 
-# 🧠 Crypto News Summarization Project
+#  Crypto News Summarization Project
 
-## 🚀 Project Overview
+## Project Overview
 
 This project is a real-time crypto news aggregator and summarizer. It scrapes articles from reliable sources using NLP-powered tools, cleans the raw HTML content, and summarizes it using transformer models from Hugging Face.
 
 ---
 
-## 📦 Requirements
+##  Requirements
 
 - Python >= 3.8
 - Flask
@@ -25,7 +25,7 @@ pip install -r requirements.txt
 
 ---
 
-## 📁 Structure
+##  Structure
 
 ```
 crypto-news/
@@ -41,7 +41,7 @@ crypto-news/
 
 ---
 
-## 🔄 Workflow
+## Workflow
 
 1. `scraper.py` fetches top headlines using CryptoCompare API.
 2. Extracts full article using **Crawl4AI**.
@@ -51,7 +51,7 @@ crypto-news/
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 ### Crawl4AI (Web Scraper)
 Crawl4AI is an open-source NLP-based scraper that automatically understands and extracts the main content from webpages — without knowing the site's structure in advance. Unlike traditional scrapers, it uses NLP signals to detect the most relevant section of an article.
@@ -80,7 +80,7 @@ The hosted model (`facebook/bart-large-cnn`) is used to summarize articles remot
 - Trained by: Facebook AI
 - Use-case: Summarization of long documents or news articles
 
-📚 How It Works
+ How It Works
 BART is a denoising autoencoder for pretraining sequence-to-sequence models. It combines the best of:
 
 BERT: Bidirectional encoder (good at understanding context)
@@ -91,7 +91,7 @@ facebook/bart-large-cnn is a fine-tuned version of BART specifically for summari
 
 ---
 
-## 🧹 Cleaning Pipeline
+## Cleaning Pipeline
 
 We filtered lines:
 - < 25 characters
@@ -108,7 +108,7 @@ Cleaned : Ethereum drops 46%, but analysts remain hopeful for $5K recovery in 20
 
 ---
 
-## ✅ Skills Demonstrated
+## Skills Involved
 
 - API Integration
 - NLP Web Scraping
@@ -121,4 +121,4 @@ Cleaned : Ethereum drops 46%, but analysts remain hopeful for $5K recovery in 20
 
 
 
-🛠️ Python | Flask | NLP | Regex | APIs | Transformers | AsyncIO
+ Python | Flask | NLP | Regex | APIs | Transformers | AsyncIO
